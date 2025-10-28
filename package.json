@@ -1,0 +1,13 @@
+{
+  "name": "terrajs-practice",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node test.js",
+    "deploy": "node deploy.js",
+    "destroy": "node destroy.js"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
