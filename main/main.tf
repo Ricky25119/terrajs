@@ -1,8 +1,3 @@
-module "rg" {
-  source   = "../main/modules/rg"
-  name     = "sample"
-  location = "west Europe" 
-}
 
 locals {
   users = jsondecode(var.pim_users)
@@ -34,3 +29,4 @@ module "pim" {
   source = "./modules/pim"
   pim_assignments = local.pim_assignments
 }
+
