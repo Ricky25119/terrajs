@@ -1,0 +1,17 @@
+location: "westeurope"
+
+pim_users:
+  - name: "user1"
+    type: "User"
+    mail_nickname: "Tharun"
+    assignment_type: "Eligible"
+    duration_days: 30
+    roles:
+      - name: "Owner"
+  # - name: "user2"
+  #   type: "User"
+  #   mail_nickname: "user2_pim"
+  #   assignment_type: "Active"
+  #   duration_hours: 24
+  #   roles:
+  #     - name: "Contributor"
