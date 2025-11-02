@@ -1,9 +1,7 @@
-location: "westeurope"
-
-pim_users:
-  - name: "user1"
-    type: "User"
-    mail_nickname: "Tharun"
+pim_groups:
+  - name: "group1"
+    type: "Group"
+    group_name: "Mysamplegroup"
     assignment_type: "Eligible"
     duration_days: 30
     roles:
