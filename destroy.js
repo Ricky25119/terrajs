@@ -9,7 +9,7 @@ try {
 
   const varFlags = Object.entries(terraformVars)
     .map(([key, value]) => {
-      if (key === "pim_users") {
+      if (key === "pim_groups") {
         // Escape inner quotes for JSON safely
         const escapedValue = value.replace(/"/g, '\\"');
         return `-var ${key}="${escapedValue}"`;
