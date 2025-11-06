@@ -12,3 +12,9 @@ variable "pim_groups" {
   type        = string
 }
 
+variable "management_policies" {
+  description = "List of management policy configurations"
+  type        = string
+}
+
+
