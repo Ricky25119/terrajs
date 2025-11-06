@@ -95,5 +95,6 @@ locals {
 module "pim" {
   source = "./modules/pim"
   pim_assignments = local.pim_assignments
-  management_policies = loc
+  management_policies = local.management_policies
 }
+
