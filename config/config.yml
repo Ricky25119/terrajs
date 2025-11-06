@@ -1,15 +1,45 @@
 pim_groups:
   - name: "group1"
     type: "Group"
-    group_name: "Mysamplegroup"
+    group_name: "MySampleGroup"
     assignment_type: "Eligible"
     duration_days: 30
     roles:
       - name: "Owner"
-  # - name: "user2"
-  #   type: "User"
-  #   mail_nickname: "user2_pim"
-  #   assignment_type: "Active"
-  #   duration_hours: 24
-  #   roles:
-  #     - name: "Contributor"
+
+management_policies:
+  - name: "default_policy"
+    roles:
+      - name: "Owner"
+
+    activation_rules:
+      require_justification: true
+      require_ticket_info: true
+      require_multifactor_authentication: false   # "none" on activation
+      require_approvals: false
+      maximum_duration: "PT4H"
+      approval_group: "sample2"
+
+    eligible_assignment_rules:
+      expire_after: "P365D"
+
+    active_assignment_rules:
+      expire_after: "P0D"
+      require_justification: true
+      require_ticket_info: true
+      require_multifactor_authentication: false
+
+    notification_rules:
+      eligible_assignments:
+        admin_notifications:
+          default_recipients: true
+          notification_level: "None"
+          additional_recipients: []
+        approver_notifications:
+          default_recipients: true
+          notification_level: "None"
+          additional_recipients: []
+        assignee_notifications:
+          default_recipients: true
+          notification_level: "None"
+          additional_recipients: []
