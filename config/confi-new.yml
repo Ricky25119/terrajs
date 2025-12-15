@@ -1,0 +1,35 @@
+location: "westeurope"
+
+pim_users:
+  - name: "user1"
+    type: "User"
+    mail_nickname: "Tharun"
+    assignment_type: "Eligible"
+    duration_days: 30
+    roles:
+      - name: "Owner"
+      
+management_policies:
+  OwnerPolicy:
+    roles:
+      Owner:
+        scopes:
+          # Use subscription or resource ID(s). Replace <SUBSCRIPTION_ID> with your subscription.
+          - "/subscriptions/c4078e20-d999-4782-a986-54eb7530ae9f/resourceGroups/sample"
+    activation_rules:
+      require_justification: true
+      require_multifactor_authentication: true
+      require_approvals: true
+      maximum_duration: "P90D"
+      approval_stage:
+        primary_approver:
+          approver1:
+            type: "User"
+            user_principal_name: "yaseenbasha869_gmail.com#EXT#@yaseenbasha869gmail.onmicrosoft.com"
+  # - name: "user2"
+  #   type: "User"
+  #   mail_nickname: "user2_pim"
+  #   assignment_type: "Active"
+  #   duration_hours: 24
+  #   roles:
+  #     - name: "Contributor"
